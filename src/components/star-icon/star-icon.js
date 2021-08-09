@@ -1,27 +1,46 @@
 import React from 'react';
 import { CatFeature } from '../../const';
-import './star-icon.css';
+import styled from 'styled-components';
 
-function StarIcon({feature}) {
+const StyledStarIcon = styled.span`
+  display: block;
+  height: 43px;
+  padding: 8px 16px;
+  font-size: ${(props) => props.theme.fontSizeDefault};
+  line-height: 27px;
+  font-weight: 700;
+  color: ${(props) => props.theme.colorWhite};
+  box-sizing: border-box;
+  background-color: ${(props) => props.bgColor};
+  border-radius: 8px 8px 8px 0;
+`;
+
+function StarIcon({className = '', feature}) {
   let options;
 
   switch (feature) {
     case CatFeature.NEW:
       options = {
         text: 'New',
-        class: 'icon_new',
+        bgColor: '#ffb334',
       };
       break;
     case CatFeature.SOFT:
       options = {
         text: 'Ласковый',
-        class: 'icon_soft',
+        bgColor: '#7fc92e',
+      };
+      break;
+    default:
+      options = {
+        text: '',
+        bgColor: '#000',
       };
       break;
   }
 
-  return (options
-    ? (<span className={`icon ${options.class}`}>{options.text}</span>)
+  return (options.text
+    ? <StyledStarIcon className={className} bgColor={options.bgColor}>{options.text}</StyledStarIcon>
     : null);
 }
 

@@ -1,5 +1,29 @@
 import React from 'react';
-import './button.css';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  height: 60px;
+  font-size: ${(props) => props.theme.fontSizeDefault};
+  width: ${(props) => `${props.width}px` || '100%'};
+  font-weight: 700;
+  line-height: 60px;
+  color: ${(props) => props.theme.colorWhite};
+  background-color: ${(props) => props.theme.colorForButton};
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-image: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: ${(props) => props.theme.colorForButtonHover};
+  }
+`;
 
 // Компонент кнопки, может превращаться в ссылку,
 // если передать link
@@ -8,16 +32,14 @@ function Button({
   link, // ссылка
   width, // ширина кнопки
 }) {
-  const generalProps = {
-    className: 'button',
-    style: {
-      width: width ? width : '100%',
-    },
-  };
-  // если передана сылка, то отисовываем как ссылку, иначе как кнопку.
-  return link
-    ? (<a href={link} {...generalProps}>{children}</a>)
-    : (<button {...generalProps} >{children}</button> );
+  return (
+    <StyledButton
+      width={width}
+      {...(link ? {as: 'a', href: link} : {})}
+    >
+      {children}
+    </StyledButton>
+  );
 }
 
 export default Button;

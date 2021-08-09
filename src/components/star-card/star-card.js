@@ -1,7 +1,35 @@
 import React from 'react';
 import Title, { TitleSize, TitleLevel } from '../title/title';
 import StarIcon from '../star-icon/star-icon';
-import './star-card.css';
+import styled from 'styled-components';
+
+const StyledStarCard = styled.article`
+  width: 353px;
+  height: 525px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: ${(props) => props.theme.colorWhite};
+  box-sizing: border-box;
+`;
+const StyledStarIcon = styled(StarIcon)`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const Figure = styled.figure`
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+`;
+const Text = styled.p`
+ margin-top: 12px;
+`;
 
 // Карточка кота
 function StarCard({
@@ -11,16 +39,14 @@ function StarCard({
   image, // url c фото кота
 }) {
   return (
-    <article className="star">
-      <figure className="star_wrapper">
-        <img src={image} className="star_image" alt="изображение кота" />
-        <div className={'star_icon'}>
-          <StarIcon feature={feature} />
-        </div>
-      </figure>
+    <StyledStarCard>
+      <Figure>
+        <Image src={image} width={313} height={320} alt="изображение кота" />
+        <StyledStarIcon feature={feature} />
+      </Figure>
       <Title level={TitleLevel.H3} size={TitleSize.SMALL}>{name}</Title>
-      <p className="star__about">{about}</p>
-    </article>
+      <Text className="star__about">{about}</Text>
+    </StyledStarCard>
   );
 }
 
