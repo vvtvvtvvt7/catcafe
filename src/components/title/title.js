@@ -47,10 +47,11 @@ function Title({
   level, // уровень h1, h2 и т.д. TitleLevel
   size, // размер заголовка TitleSize
   children, // дочерний элемент который будет отображён в заголовке
+  className,
 }) {
 
   return (
-    <StyledTitle as={`h${level}`} size={size}>
+    <StyledTitle as={`h${level}`} size={size} className={className}>
       {children}
     </StyledTitle>
   );

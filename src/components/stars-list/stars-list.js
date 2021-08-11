@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import starsImage from '../../assets/images/stars-image.svg';
 import startLeft from '../../assets/images/stars-left.svg';
 import startRight from '../../assets/images/stars-right.svg';
+import { AppRoute } from '../../const';
 
 const StyledStarsList = styled.section`
   position: relative;
@@ -84,7 +85,7 @@ function StarsList({
           </StarItem>),
         )}
       </StarList>
-      <Button width={353}>Купить билет</Button>
+      <Button width={353} link={AppRoute.BUY}>Купить билет</Button>
     </StyledStarsList>
   );
 }

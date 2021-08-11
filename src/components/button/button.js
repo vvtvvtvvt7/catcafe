@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
+  display: block;
   height: 60px;
   font-size: ${(props) => props.theme.fontSizeDefault};
   width: ${(props) => `${props.width}px` || '100%'};
@@ -14,32 +16,37 @@ const StyledButton = styled.button`
   border-radius: 5px;
   text-decoration: none;
   border: none;
-  outline: none;
   background-image: none;
   box-shadow: none;
   cursor: pointer;
-
   &:hover,
   &:active {
     background-color: ${(props) => props.theme.colorForButtonHover};
   }
 `;
 
-// Компонент кнопки, может превращаться в ссылку,
-// если передать link
-function Button({
+function buttonForRef({
   children, // дочерний элемент, отображаемый в кнопке
   link, // ссылка
   width, // ширина кнопки
-}) {
+  className,
+  onClick,
+  ...props
+}, ref) {
   return (
     <StyledButton
+      {...props}
       width={width}
-      {...(link ? {as: 'a', href: link} : {})}
+      ref={ref}
+      {...(link ? {to: link} : {as: 'button', onClick, type: 'button'})}
+      className={className}
     >
       {children}
     </StyledButton>
   );
 }
 
-export default Button;
+// Компонент кнопки,
+const ButtonRef = forwardRef(buttonForRef);
+
+export default ButtonRef;
