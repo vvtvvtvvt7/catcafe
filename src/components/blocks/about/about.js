@@ -1,8 +1,8 @@
 import React from 'react';
-import Title, { TitleLevel, TitleSize } from '../title/title';
+import Title, { TitleLevel, TitleSize } from '../../ui/title/title';
 import styled from 'styled-components';
-import aboutImage from  '../../assets/images/about.svg';
-import mapMark from  '../../assets/images/map-mark.svg';
+import aboutImage from '../../../assets/images/about.svg';
+import mapMark from '../../../assets/images/map-mark.svg';
 
 const StyleAbout = styled.section`
   position: relative;

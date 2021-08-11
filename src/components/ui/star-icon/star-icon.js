@@ -1,5 +1,5 @@
 import React from 'react';
-import { CatFeature } from '../../const';
+import { CatFeature } from '../../../const';
 import styled from 'styled-components';
 
 const StyledStarIcon = styled.span`

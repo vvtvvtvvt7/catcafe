@@ -1,6 +1,5 @@
 import React from 'react';
-import Logo from '../logo/logo';
-import Button from '../button/button';
+import Logo from '../../ui/logo/logo';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -15,11 +14,13 @@ const StyledHeader = styled.header`
 `;
 
 // шапка сайта
-function Header() {
+function Header({children}) {
   return (
     <StyledHeader>
       <Logo />
-      <Button width={260} link={'/pay'}>Купить билет</Button>
+      <nav>
+        {children}
+      </nav>
     </StyledHeader>
   );
 }
