@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title, { TitleSize } from '../title/title';
-import Gallery from '../gallery/gallery';
-import galleryLeft from '../../assets/images/gallery-left.svg';
-import galleryRight from '../../assets/images/gallery-right.svg';
-import galleryBackground from '../../assets/images/gallery-background.svg';
+import Title, { TitleSize } from '../../ui/title/title';
+import Gallery from '../../ui/gallery/gallery';
+import galleryLeft from '../../../assets/images/gallery-left.svg';
+import galleryRight from '../../../assets/images/gallery-right.svg';
+import galleryBackground from '../../../assets/images/gallery-background.svg';
 
 const StyledCafeGallery = styled.section`
   padding-left: ${(props) => props.theme.pagePadding};

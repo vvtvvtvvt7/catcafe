@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from '../button/button';
-import Title from '../title/title';
-import StarCard from '../star-card/star-card';
+import Button from '../../ui/button/button';
+import Title from '../../ui/title/title';
+import StarCard from '../../ui/star-card/star-card';
 import styled from 'styled-components';
-import starsImage from '../../assets/images/stars-image.svg';
-import startLeft from '../../assets/images/stars-left.svg';
-import startRight from '../../assets/images/stars-right.svg';
-import { AppRoute } from '../../const';
+import starsImage from '../../../assets/images/stars-image.svg';
+import startLeft from '../../../assets/images/stars-left.svg';
+import startRight from '../../../assets/images/stars-right.svg';
+import { AppRoute } from '../../../const';
 
 const StyledStarsList = styled.section`
   position: relative;

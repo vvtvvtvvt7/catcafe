@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import buyBackground from '../../assets/images/buy-background.svg';
-import buyBackgroundRight from '../../assets/images/buy-right-background.svg';
-import buyBackgroundRightTop from '../../assets/images/buy-right-background-top.svg';
+import buyBackground from '../../../assets/images/buy-background.svg';
+import buyBackgroundRight from '../../../assets/images/buy-right-background.svg';
+import buyBackgroundRightTop from '../../../assets/images/buy-right-background-top.svg';
 
 const StyledBuy = styled.section`
   padding-left: ${(props) => props.theme.pagePadding};

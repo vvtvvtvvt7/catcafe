@@ -1,11 +1,11 @@
 import React from 'react';
-import CageGallery from '../cafe-gallery/cafe-gallery';
-import Header from '../header/header';
-import Footer from '../footer/footer';
-import Buy from '../buy/buy';
+import CageGallery from '../../blocks/cafe-gallery/cafe-gallery';
+import Header from '../../layout/header/header';
+import Footer from '../../layout/footer/footer';
+import Buy from '../../blocks/buy/buy';
 import styled from 'styled-components';
-import {AppRoute} from '../../const';
-import Button from '../button/button';
+import {AppRoute} from '../../../const';
+import Button from '../../ui/button/button';
 
 const StyledButton = styled(Button)`
   padding: 0;

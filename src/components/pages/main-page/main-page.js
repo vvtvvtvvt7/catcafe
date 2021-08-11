@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../header/header';
-import About from '../about/about';
-import StarsList from '../stars-list/stars-list';
-import Footer from '../footer/footer';
-import { TitleLevel } from '../title/title';
-import {AppRoute} from '../../const';
-import Button from '../button/button';
+import Header from '../../layout/header/header';
+import About from '../../blocks/about/about';
+import StarsList from '../../blocks/stars-list/stars-list';
+import Footer from '../../layout/footer/footer';
+import { TitleLevel } from '../../ui/title/title';
+import {AppRoute} from '../../../const';
+import Button from '../../ui/button/button';
 
 // Главная страница сайта
 function MainPage({

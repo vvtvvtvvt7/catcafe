@@ -1,10 +1,10 @@
 import React from 'react';
-import MainPage from '../main-page/main-page';
+import MainPage from '../pages/main-page/main-page';
 import starList from '../../mocks/starList';
 import gallery from '../../mocks/gallery';
 import buyOptions from '../../mocks/buyOptions';
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
-import BuyPage from '../buy-page/buy-page';
+import BuyPage from '../pages/buy-page/buy-page';
 import { createGlobalStyle } from 'styled-components';
 import { AppRoute } from '../../const';
 

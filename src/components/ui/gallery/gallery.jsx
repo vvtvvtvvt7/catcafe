@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation,Thumbs } from 'swiper/core';
 import styled from 'styled-components';
 import Button from '../button/button';
-import LeftArrow from '../icons/LeftArrow';
+import LeftArrow from '../../icons/LeftArrow';
 import 'swiper/swiper.scss';
 
 SwiperCore.use([Navigation,Thumbs]);
