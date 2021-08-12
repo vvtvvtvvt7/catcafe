@@ -20,7 +20,7 @@ const StyledStarIcon = styled(StarIcon)`
 const Figure = styled.figure`
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 `;
 
 const Image = styled.img`

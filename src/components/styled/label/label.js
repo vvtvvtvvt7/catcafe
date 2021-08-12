@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Label = styled.label`
+  display: block;
   ${(props) => props.small
     ? `
     font-size: 14px;

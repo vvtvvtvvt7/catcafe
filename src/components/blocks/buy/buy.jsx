@@ -53,7 +53,7 @@ const StyleTitle = styled(Title)`
 `;
 
 const FormItem = styled.div`
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 `;
 
 const RadioLabelForTime = styled.span`
@@ -63,6 +63,7 @@ const RadioLabelForTime = styled.span`
   margin-right: 12px;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
   ${(props) => props.isChecked ? `
     background-color: ${props.theme.colorForButton};
     color: ${props.theme.colorWhite}

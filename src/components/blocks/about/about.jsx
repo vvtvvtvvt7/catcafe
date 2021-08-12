@@ -28,7 +28,9 @@ const StyledSection = styled(Section)`
 `;
 
 const TextWrapper = styled.div`
-  max-width: 650px;
+  position: relative;
+  min-width: 650px;
+  z-index: 3;
 `;
 const Paragraph = styled.p`
   margin: 0;
@@ -37,7 +39,7 @@ const Paragraph = styled.p`
 `;
 const Text = styled(Paragraph)`
   margin-top: ${(props)=> props.theme.indent};
-  padding-right: 100px;
+  padding-right: 122px;
   margin-bottom: 40px;
 `;
 
