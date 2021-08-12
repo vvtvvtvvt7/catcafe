@@ -1,14 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+import Section from '../../styled/section/section';
 import Button from '../../ui/button/button';
+import Ul from '../../styled/ul/ul';
+import Li from '../../styled/li/li';
 import Title from '../../ui/title/title';
 import StarCard from '../../ui/star-card/star-card';
-import styled from 'styled-components';
 import starsImage from '../../../assets/images/stars-image.svg';
 import startLeft from '../../../assets/images/stars-left.svg';
 import startRight from '../../../assets/images/stars-right.svg';
 import { AppRoute } from '../../../const';
 
-const StyledStarsList = styled.section`
+const StyledStarsList = styled(Section)`
   position: relative;
   display: flex;
   padding-right: ${(props) => props.theme.pagePadding};
@@ -24,7 +27,7 @@ const StyledStarsList = styled.section`
   align-items: center;
   overflow: hidden;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 36px;
     left: 0;
@@ -36,20 +39,20 @@ const StyledStarsList = styled.section`
     background-repeat: no-repeat;
   }
 
-  &:after {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 111px;
-  height: 158px;
-  content: "";
-  background-image: url(${startRight});
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 111px;
+    height: 158px;
+    content: "";
+    background-image: url(${startRight});
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 `;
 
-const StarList = styled.ul`
+const StarList = styled(Ul)`
   margin-top: 44px;
   margin-bottom: 44px;
   padding: 0;
@@ -59,9 +62,8 @@ const StarList = styled.ul`
   line-height: 0;
 `;
 
-const StarItem = styled.li`
+const StarItem = styled(Li)`
   display: inline-block;
-  list-style: none;
   margin-left: ${(props) => props.theme.indent};
   margin-top: ${(props) => props.theme.indent};
   text-align: left;
@@ -70,7 +72,7 @@ const StarItem = styled.li`
   overflow: hidden;
 `;
 
-// список известных в котокафе котов
+// список известных котов
 function StarsList({
   stars, // коты
   level, // уровень заголовка списка.

@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledButton = styled(Link)`
   display: block;
@@ -19,6 +19,7 @@ const StyledButton = styled(Link)`
   background-image: none;
   box-shadow: none;
   cursor: pointer;
+
   &:hover,
   &:active {
     background-color: ${(props) => props.theme.colorForButtonHover};
@@ -29,9 +30,9 @@ function buttonForRef({
   children, // дочерний элемент, отображаемый в кнопке
   link, // ссылка
   width, // ширина кнопки
-  className,
-  onClick,
-  ...props
+  className, // класс
+  onClick, // событие по клику
+  ...props // остальные переданные пропсы
 }, ref) {
   return (
     <StyledButton

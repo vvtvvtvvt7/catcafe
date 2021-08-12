@@ -1,9 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 import CageGallery from '../../blocks/cafe-gallery/cafe-gallery';
 import Header from '../../layout/header/header';
 import Footer from '../../layout/footer/footer';
 import Buy from '../../blocks/buy/buy';
-import styled from 'styled-components';
 import {AppRoute} from '../../../const';
 import Button from '../../ui/button/button';
 
@@ -14,6 +14,7 @@ const StyledButton = styled(Button)`
   background-color: ${(props)=> props.theme.colorWhite};
   color: ${(props)=> props.theme.colorBlackForText};
   font-size: 18px;
+
   &:hover,
   &:active {
     background-color: ${(props)=> props.theme.colorWhite};
@@ -21,7 +22,11 @@ const StyledButton = styled(Button)`
   }
 `;
 
-function BuyPage({slides, buyOptions}) {
+// страница покупки билетов
+function BuyPage({
+  slides, // список слайдов для галереи
+  buyOptions, // опции покупки билетов
+}) {
 
   return (
     <>

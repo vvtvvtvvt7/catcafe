@@ -13,7 +13,7 @@ function MainPage({
 }) {
   return (
     <>
-      <Header>
+      <Header isMainPage>
         <Button width={260} link={AppRoute.BUY}>Купить билет</Button>
       </Header>
       <About />

@@ -1,6 +1,6 @@
 import React from 'react';
-import { CatFeature } from '../../../const';
 import styled from 'styled-components';
+import { CatFeature } from '../../../const';
 
 const StyledStarIcon = styled.span`
   display: block;
