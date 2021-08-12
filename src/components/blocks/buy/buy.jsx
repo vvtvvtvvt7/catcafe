@@ -198,7 +198,7 @@ function Buy ({buyOptions}) {
           <Accordion
             textComponent={AccordionText}
             content={accordionContent}
-            isHtmlText
+            isHtml
           />
         </FormItem>
         <Label small margin={8}>Цена</Label>
