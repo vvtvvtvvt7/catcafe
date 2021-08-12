@@ -1,12 +1,15 @@
 import React from 'react';
 import LogoImage from '../../icons/Logo';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+import { AppRoute } from '../../../const';
 
-const StyledLogo = styled.a`
+const StyledLogo = styled(Link)`
   display: flex;
   height: 44px;
   align-items: center;
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
   }
@@ -23,9 +26,9 @@ const Text = styled.span`
 `;
 
 // Логотип сайта с названием
-function Logo() {
+function Logo({isMainPage}) {
   return (
-    <StyledLogo href="/">
+    <StyledLogo {...isMainPage? {as: 'div'} : {to: AppRoute.MAIN}}>
       <LogoImage />
       <Text>Котокафе</Text>
     </StyledLogo>

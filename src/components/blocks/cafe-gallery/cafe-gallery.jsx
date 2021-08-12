@@ -1,25 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import Section from '../../styled/section/section';
 import Title, { TitleSize } from '../../ui/title/title';
 import Gallery from '../../ui/gallery/gallery';
 import galleryLeft from '../../../assets/images/gallery-left.svg';
 import galleryRight from '../../../assets/images/gallery-right.svg';
 import galleryBackground from '../../../assets/images/gallery-background.svg';
 
-const StyledCafeGallery = styled.section`
-  padding-left: ${(props) => props.theme.pagePadding};
-  padding-right: ${(props) => props.theme.pagePadding};
+const StyledSection = styled(Section)`
+  display: block;
   padding-top: 80px;
-  padding-bottom: 100px;
   background-color: ${(props) => props.theme.colorForDarkBackground};
-  // display: flex;
-  position: relative;
   background-image: url(${galleryBackground});
   background-position: right top;
   background-size: 321px 305px;
   background-repeat: no-repeat;
   justify-content: center;
-  &:before {
+
+  &::before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -31,9 +29,9 @@ const StyledCafeGallery = styled.section`
     background-repeat: no-repeat;
   }
 
-  &:after {
+  &::after {
     position: absolute;
-    top: 0;
+    top: 77px;
     right: 0;
     width: 225px;
     height: 222px;
@@ -48,14 +46,16 @@ const StyledTitle = styled(Title)`
   margin-bottom: 64px;
 `;
 
-// страница покупки
-function CafeGallery({slides}) {
+// Галерея котокафэ
+function CafeGallery({
+  slides, // массив фотографий каждый элемент содержит поле src и alt
+}) {
 
   return (
-    <StyledCafeGallery>
+    <StyledSection>
       <StyledTitle level={2} size={TitleSize.BIG}>Галерея нашего кафе</StyledTitle>
       <Gallery slides={slides} />
-    </StyledCafeGallery>
+    </StyledSection>
   );
 }
 

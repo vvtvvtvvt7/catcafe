@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import Title, { TitleSize, TitleLevel } from '../title/title';
 import StarIcon from '../star-icon/star-icon';
-import styled from 'styled-components';
 
 const StyledStarCard = styled.article`
   width: 353px;
@@ -20,7 +20,7 @@ const StyledStarIcon = styled(StarIcon)`
 const Figure = styled.figure`
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 `;
 
 const Image = styled.img`
@@ -28,7 +28,7 @@ const Image = styled.img`
   height: auto;
 `;
 const Text = styled.p`
- margin-top: 12px;
+  margin-top: 12px;
 `;
 
 // Карточка кота

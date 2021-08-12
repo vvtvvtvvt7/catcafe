@@ -1,17 +1,18 @@
 import React from 'react';
-import Title, { TitleLevel, TitleSize } from '../../ui/title/title';
 import styled from 'styled-components';
+import Section from '../../styled/section/section';
+import Title, { TitleLevel, TitleSize } from '../../ui/title/title';
 import aboutImage from '../../../assets/images/about.svg';
 import mapMark from '../../../assets/images/map-mark.svg';
 
-const StyleAbout = styled.section`
-  position: relative;
-  display: flex;
-  height: 600px;
+const StyledSection = styled(Section)`
   padding-left: ${(props) => props.theme.pagePadding};
+  padding-top: 159px;
+  padding-bottom: 159px;
   padding-right: 603px;
   background-color: ${(props) => props.theme.colorForLightBackground};
   align-items: center;
+
   &::after {
     position: absolute;
     top: 0;
@@ -27,7 +28,9 @@ const StyleAbout = styled.section`
 `;
 
 const TextWrapper = styled.div`
-  max-width: 650px;
+  position: relative;
+  min-width: 650px;
+  z-index: 3;
 `;
 const Paragraph = styled.p`
   margin: 0;
@@ -36,7 +39,7 @@ const Paragraph = styled.p`
 `;
 const Text = styled(Paragraph)`
   margin-top: ${(props)=> props.theme.indent};
-  padding-right: 142px;
+  padding-right: 122px;
   margin-bottom: 40px;
 `;
 
@@ -64,16 +67,16 @@ const Address = styled(Paragraph)`
 // Раздел о котокафе
 function About() {
   return (
-    <StyleAbout>
+    <StyledSection>
       <TextWrapper>
         <Title level={TitleLevel.H1} size={TitleSize.BIG}>Первое в России котокафе</Title>
-        <Text>Крупнейшее котокафе России, в отором живёт 50 кошек и котов,
+        <Text>Крупнейшее котокафе России, в котором живёт 50 кошек и котов,
                 и каждый из них ищет новый дом. Животных можно гладить, фотографировать, играть с ними.
         </Text>
         <WorkTime>Рабочее время с 8:00 до 23:00</WorkTime>
         <Address>Санкт-Петербург, Большая Конюшенная улица, 27</Address>
-      </ TextWrapper>
-    </ StyleAbout>
+      </TextWrapper>
+    </StyledSection>
   );
 }
 

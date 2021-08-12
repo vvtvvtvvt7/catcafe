@@ -23,7 +23,7 @@ const StyledTitle = styled.h1 `
   font-size: ${(props) => {
     let fontSize = '36px';
     if (props.size === TitleSize.BIG) {
-      fontSize = '41px';
+      fontSize = '44px';
     }
     if (props.size === TitleSize.SMALL) {
       fontSize = '28px';
@@ -31,14 +31,14 @@ const StyledTitle = styled.h1 `
     return fontSize;
   }};
   line-height: ${(props) => {
-    let fontSize = '41px';
+    let lineРeight = '41px';
     if (props.size === TitleSize.BIG) {
-      fontSize = '50px';
+      lineРeight = '50px';
     }
     if (props.size === TitleSize.SMALL) {
-      fontSize = '32px';
+      lineРeight = '32px';
     }
-    return fontSize;
+    return lineРeight;
   }};
 `;
 

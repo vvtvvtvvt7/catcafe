@@ -1,10 +1,10 @@
 import React, {useState, useRef} from 'react';
+import 'swiper/swiper.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation,Thumbs } from 'swiper/core';
 import styled from 'styled-components';
 import Button from '../button/button';
 import LeftArrow from '../../icons/LeftArrow';
-import 'swiper/swiper.scss';
 
 SwiperCore.use([Navigation,Thumbs]);
 
@@ -18,6 +18,7 @@ const StyledSwiperMini = styled(Swiper)`
   width: 726px;
   height: 128px;
 `;
+
 const StyleSlide = styled.img `
   border-radius: 20px;
   width: 726px;
@@ -34,6 +35,7 @@ const StyleSlideMini = styled.div`
   border-radius: 12px;
   cursor: pointer;
 `;
+
 const SliderWrapper = styled.div`
   margin: 0 auto;
   width: 726px;
@@ -51,7 +53,7 @@ const StyledButtonLeft = styled(Button)`
   left: -94px;
   height: 64px;
   width: 64px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   padding: 0;
 `;
 
@@ -59,16 +61,20 @@ const StyledButtonRight = styled(StyledButtonLeft)`
   right: -94px;
   left: auto;
 `;
+
 const RightArrow = styled(LeftArrow)`
   transform: rotate(180deg);
 `;
 
 
-function Gallery({slides}) {
+function Gallery({
+  slides, // список слайдов каждый слайд это src картинки и alt
+}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+
   return (
     <>
       <StyledSwiper
@@ -80,7 +86,7 @@ function Gallery({slides}) {
         navigation
         loop
       >{slides.map((slide, index) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide key={slide.src}>
             <StyleSlide src={slide.src} alt={slide.alt} width={728} height={408} />
           </SwiperSlide>
         ))}
@@ -104,7 +110,7 @@ function Gallery({slides}) {
         >
 
           {slides.map((slide, index) => (
-            <SwiperSlide key={slide.id}>
+            <SwiperSlide key={slide.src}>
               <StyleSlideMini
                 active={activeSlide === index + 1}
                 src={slide.src}
