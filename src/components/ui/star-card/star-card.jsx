@@ -26,7 +26,8 @@ const Figure = styled.figure`
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 313px;
+  object-fit: contain;
   border-radius: 8px;
 `;
 const Text = styled.p`
