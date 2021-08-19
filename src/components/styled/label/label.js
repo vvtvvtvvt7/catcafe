@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Label = styled.label`
   display: block;
-  ${(props) => props.small
+  ${(props) => props.$small
     ? `
     font-size: 14px;
   `
@@ -11,7 +11,7 @@ const Label = styled.label`
     display: block;
   `}
 
-  margin-bottom: ${(props) => props.margin || 0}px;
+  margin-bottom: ${(props) => props.$margin || 0}px;
 `;
 
 export default Label;

@@ -5,12 +5,13 @@ import StarIcon from '../star-icon/star-icon';
 
 const StyledStarCard = styled.article`
   width: 353px;
-  height: 525px;
+  min-height: 525px;
   padding: 20px;
   border-radius: 12px;
   background-color: ${(props) => props.theme.colorWhite};
   box-sizing: border-box;
 `;
+
 const StyledStarIcon = styled(StarIcon)`
   position: absolute;
   top: 0;
@@ -20,15 +21,17 @@ const StyledStarIcon = styled(StarIcon)`
 const Figure = styled.figure`
   position: relative;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: auto;
+  border-radius: 8px;
 `;
 const Text = styled.p`
-  margin-top: 12px;
+  margin-top: 7px;
+  margin-bottom: 0px;
 `;
 
 // Карточка кота
@@ -45,7 +48,7 @@ function StarCard({
         <StyledStarIcon feature={feature} />
       </Figure>
       <Title level={TitleLevel.H3} size={TitleSize.SMALL}>{name}</Title>
-      <Text className="star__about">{about}</Text>
+      <Text className="star__about" dangerouslySetInnerHTML={{__html: about}} />
     </StyledStarCard>
   );
 }

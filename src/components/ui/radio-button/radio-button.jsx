@@ -29,7 +29,7 @@ function RadioButton({
         {...props}
         type="radio"
       />
-      <LabelComponent isChecked={isChecked}>{text}</LabelComponent>
+      <LabelComponent $isChecked={isChecked}>{text}</LabelComponent>
     </Label>
   );
 

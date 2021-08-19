@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoImage from '../../icons/Logo';
+import LogoImage from '../../../assets/images/logo.cmp.svg';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import { AppRoute } from '../../../const';
@@ -26,9 +26,9 @@ const Text = styled.span`
 `;
 
 // Логотип сайта с названием
-function Logo({isMainPage}) {
+function Logo() {
   return (
-    <StyledLogo {...isMainPage? {as: 'div'} : {to: AppRoute.MAIN}}>
+    <StyledLogo to={AppRoute.MAIN}>
       <LogoImage />
       <Text>Котокафе</Text>
     </StyledLogo>

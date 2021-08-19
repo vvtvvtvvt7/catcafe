@@ -55,20 +55,10 @@ const StyledStarsList = styled(Section)`
 const StarList = styled(Ul)`
   margin-top: 44px;
   margin-bottom: 44px;
-  padding: 0;
-  text-align: center;
-  margin-left: -20px;
-  font-size: 0;
-  line-height: 0;
 `;
 
 const StarItem = styled(Li)`
-  display: inline-block;
-  margin-left: ${(props) => props.theme.indent};
-  margin-top: ${(props) => props.theme.indent};
   text-align: left;
-  font-size: ${(props) => props.theme.fontSizeDefault};
-  line-height: 27px;
   overflow: hidden;
 `;
 
@@ -80,14 +70,14 @@ function StarsList({
   return (
     <StyledStarsList>
       <Title level={level} >Наши звёзды</Title>
-      <StarList>
+      <StarList $isGridList>
         {stars.map((star) => (
           <StarItem key={star.id}>
             <StarCard {...star} />
           </StarItem>),
         )}
       </StarList>
-      <Button width={353} link={AppRoute.BUY}>Купить билет</Button>
+      <Button minWidth={353} link={AppRoute.BUY}>Купить билет</Button>
     </StyledStarsList>
   );
 }
