@@ -7,9 +7,6 @@ const Section = styled.section`
   padding-left: ${(props) => props.theme.pagePadding};
   padding-right: ${(props) => props.theme.pagePadding};
   position: relative;
-  min-width: 1000px;
-  max-width: 1500px;
-  margin: 0 auto;
   box-sizing: border-box;
 `;
 

@@ -1,71 +1,21 @@
 import React, {useState, useRef} from 'react';
 import 'swiper/swiper.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation,Thumbs } from 'swiper/core';
-import styled from 'styled-components';
-import Button from '../button/button';
-import LeftArrow from '../../icons/LeftArrow';
+import LeftArrow from '../../../assets/images/left-arrow.cmp.svg';
+
+import {
+  RightArrow,
+  SliderWrapper,
+  StyledButtonLeft,
+  StyledButtonRight,
+  StyledSwiper,
+  StyledSwiperMini,
+  StyleSlide,
+  StyleSlideMini
+} from './styles';
 
 SwiperCore.use([Navigation,Thumbs]);
-
-const StyledSwiper = styled(Swiper)`
-  width: 726px;
-  height: 408px;
-  margin-bottom: 20px;
-`;
-
-const StyledSwiperMini = styled(Swiper)`
-  width: 726px;
-  height: 128px;
-`;
-
-const StyleSlide = styled.img `
-  border-radius: 20px;
-  width: 726px;
-  height: auto;
-`;
-
-const StyleSlideMini = styled.div`
-  width: 167px;
-  height: 128px;
-  background-image: url("${(props)=> props.src}");
-  position: relative;
-  filter: brightness(${(props) => props.active ? 100 : 50 }%);
-  background-size: cover;
-  border-radius: 12px;
-  cursor: pointer;
-`;
-
-const SliderWrapper = styled.div`
-  margin: 0 auto;
-  width: 726px;
-  position: relative;
-`;
-
-const StyledButtonLeft = styled(Button)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: -94px;
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  padding: 0;
-`;
-
-const StyledButtonRight = styled(StyledButtonLeft)`
-  right: -94px;
-  left: auto;
-`;
-
-const RightArrow = styled(LeftArrow)`
-  transform: rotate(180deg);
-`;
-
 
 function Gallery({
   slides, // список слайдов каждый слайд это src картинки и alt
@@ -112,7 +62,7 @@ function Gallery({
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.src}>
               <StyleSlideMini
-                active={activeSlide === index + 1}
+                $active={activeSlide === index + 1}
                 src={slide.src}
                 alt={slide.alt}
               />

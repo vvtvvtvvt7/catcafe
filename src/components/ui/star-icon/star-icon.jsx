@@ -11,8 +11,9 @@ const StyledStarIcon = styled.span`
   font-weight: 700;
   color: ${(props) => props.theme.colorWhite};
   box-sizing: border-box;
-  background-color: ${(props) => props.bgColor};
+  background-color: ${(props) => props.$bgColor};
   border-radius: 8px 8px 8px 0;
+  text-transform: uppercase;
 `;
 
 function StarIcon({className = '', feature}) {
@@ -40,7 +41,7 @@ function StarIcon({className = '', feature}) {
   }
 
   return (options.text
-    ? <StyledStarIcon className={className} bgColor={options.bgColor}>{options.text}</StyledStarIcon>
+    ? <StyledStarIcon className={className} $bgColor={options.bgColor}>{options.text}</StyledStarIcon>
     : null);
 }
 

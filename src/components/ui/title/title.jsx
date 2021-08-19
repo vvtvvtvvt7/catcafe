@@ -22,10 +22,10 @@ const StyledTitle = styled.h1 `
   font-weight: 700;
   font-size: ${(props) => {
     let fontSize = '36px';
-    if (props.size === TitleSize.BIG) {
+    if (props.$size === TitleSize.BIG) {
       fontSize = '44px';
     }
-    if (props.size === TitleSize.SMALL) {
+    if (props.$size === TitleSize.SMALL) {
       fontSize = '28px';
     }
     return fontSize;
@@ -51,7 +51,7 @@ function Title({
 }) {
 
   return (
-    <StyledTitle as={`h${level}`} size={size} className={className}>
+    <StyledTitle as={`h${level}`} $size={size} className={className}>
       {children}
     </StyledTitle>
   );
