@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react';
 import 'swiper/swiper.scss';
 import { SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation,Thumbs } from 'swiper/core';
-import LeftArrow from '../../../assets/images/left-arrow.cmp.svg';
+import LeftArrow from 'src/assets/images/left-arrow.cmp.svg';
 
 import {
   RightArrow,
@@ -18,7 +18,7 @@ import {
 SwiperCore.use([Navigation,Thumbs]);
 
 function Gallery({
-  slides, // список слайдов каждый слайд это src картинки и alt
+  slides = [], // список слайдов каждый слайд это src картинки и alt
 }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeSlide, setActiveSlide] = useState(0);
@@ -30,23 +30,25 @@ function Gallery({
       <StyledSwiper
         spaceBetween={20}
         onSlideChange={(slider)=> {
-          setActiveSlide(slider.activeIndex);
+          setActiveSlide(slider.realIndex);
         }}
         thumbs={{ swiper: thumbsSwiper }}
         navigation
         loop
-      >{slides.map((slide, index) => (
-          <SwiperSlide key={slide.src}>
+      >{slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
             <StyleSlide src={slide.src} alt={slide.alt} width={728} height={408} />
           </SwiperSlide>
         ))}
       </StyledSwiper>
       <SliderWrapper>
         <StyledSwiperMini
-          onSwiper={setThumbsSwiper}
+          onSwiper={(e) => {
+            setThumbsSwiper(e);
+          }}
           spaceBetween={20}
           slidesPerView={4}
-          watchSlidesVisibility
+          freeMode
           watchSlidesProgress
           loop
           navigation={{
@@ -60,9 +62,9 @@ function Gallery({
         >
 
           {slides.map((slide, index) => (
-            <SwiperSlide key={slide.src}>
+            <SwiperSlide key={slide.id}>
               <StyleSlideMini
-                $active={activeSlide === index + 1}
+                $active={activeSlide === index}
                 src={slide.src}
                 alt={slide.alt}
               />

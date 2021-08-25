@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Swiper} from 'swiper/react';
-import Button from '../button/button';
-import LeftArrow from '../../../assets/images/left-arrow.cmp.svg';
+import Button from 'src/components/ui/button/button';
+import LeftArrow from 'src/assets/images/left-arrow.cmp.svg';
 
 export const StyledSwiper = styled(Swiper)`
   width: 726px;

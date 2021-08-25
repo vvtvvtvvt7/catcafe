@@ -1,5 +1,5 @@
 import React from 'react';
-import Title, { TitleLevel, TitleSize } from '../../ui/title/title';
+import Title, { TitleLevel, TitleSize } from 'src/components/ui/title/title';
 import {
   Address,
   Text,
