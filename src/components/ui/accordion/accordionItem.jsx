@@ -5,7 +5,7 @@ import {
   ContentWrapper,
   TitleWrapper,
   Wrapper
-} from './stylesAccordionItem';
+} from './styles';
 
 // элемент аккордеона
 function AccordionItem({
@@ -33,7 +33,7 @@ function AccordionItem({
         <Button
           type="button"
           onClick={onClick}
-          title={`${open ? 'Скрыть': 'Раскрыть'} описание ${title}`}
+          title={`${open ? 'Скрыть': 'Раскрыть'} описание`}
         >
           <Arrow open={open} />
         </Button>

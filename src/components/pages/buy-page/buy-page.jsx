@@ -1,6 +1,6 @@
 import React from 'react';
-import CageGallery from '../../blocks/cafe-gallery/cafe-gallery';
-import Buy from '../../blocks/buy/buy';
+import CageGallery from 'src/components/blocks/cafe-gallery/cafe-gallery';
+import Buy from 'src/components/blocks/buy/buy';
 
 // страница покупки билетов
 function BuyPage({

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import LeftArrow from '../../../assets/images/left-arrow.cmp.svg';
+import LeftArrow from 'src/assets/images/left-arrow.cmp.svg';
+import {Li} from 'src/components/styled';
+
+export const StyledLi = styled(Li)`
+  margin-bottom: 8px;
+`;
 
 export const Button = styled.button`
   display: flex;

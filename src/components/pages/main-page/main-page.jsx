@@ -1,7 +1,7 @@
 import React from 'react';
-import About from '../../blocks/about/about';
-import StarsList from '../../blocks/stars-list/stars-list';
-import { TitleLevel } from '../../ui/title/title';
+import About from 'src/components/blocks/about/about';
+import StarsList from 'src/components/blocks/stars-list/stars-list';
+import { TitleLevel } from 'src/components/ui/title/title';
 
 // Главная страница сайта
 function MainPage({

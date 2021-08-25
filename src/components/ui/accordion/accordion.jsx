@@ -1,12 +1,7 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import AccordionItem from './accordionItem';
-import Ul from '../../styled/ul/ul';
-import Li from '../../styled/li/li';
-
-const StyledLi = styled(Li)`
-  margin-bottom: 8px;
-`;
+import { Ul } from 'src/components/styled';
+import { StyledLi } from './styles';
 
 export function Accordion({
   titleComponent, // компонент для отрисовки заголовка

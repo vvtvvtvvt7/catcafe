@@ -4,10 +4,6 @@ export const GlobalStyle = createGlobalStyle`
   html {
     height: 100%;
   }
-  body {
-    position: relative;
-    min-height: 100%;
-  }
 
   body,
   html {
@@ -15,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    position: relative;
+    min-height: 100%;
     font-family: ${(props) => props.theme.fontFamily};
     font-size: ${(props) => props.theme.fontSizeDefault};
     line-height: 27px;

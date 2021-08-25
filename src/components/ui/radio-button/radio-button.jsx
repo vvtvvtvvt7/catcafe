@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import VisuallyHidden from '../../styled/visually-hidden-input/visually-hidden-input';
+import { VisuallyHiddenInput } from 'src/components/styled';
 
 const Label = styled.label`
   display: block;
@@ -21,7 +21,7 @@ function RadioButton({
 
   return (
     <Label>
-      <VisuallyHidden
+      <VisuallyHiddenInput
         value={value}
         checked={isChecked}
         name={name}

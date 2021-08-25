@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import Section from '../../styled/section/section';
-import buyBackground from '../../../assets/images/buy-background.svg';
-import buyBackgroundRight from '../../../assets/images/buy-right-background.svg';
-import buyBackgroundRightTop from '../../../assets/images/buy-right-background-top.svg';
-import Title from '../../ui/title/title';
-import Ul from '../../styled/ul/ul';
+import styled, { css } from 'styled-components';
+import { Section, Ul } from 'src/components/styled';
+import buyBackground from 'src/assets/images/buy-background.svg';
+import buyBackgroundRight from 'src/assets/images/buy-right-background.svg';
+import buyBackgroundRightTop from 'src/assets/images/buy-right-background-top.svg';
+import Title from 'src/components/ui/title/title';
+
 
 export const StyledSection = styled(Section)`
   display: block;
@@ -57,10 +57,10 @@ export const RadioLabelForTime = styled.span`
   align-items: center;
   border-radius: 8px;
   transition: color  0.2s ease-out, background-color  0.2s ease-out;
-  ${(props) => props.$isChecked ? `
+  ${(props) => props.$isChecked ? css`
     background-color: ${props.theme.colorForButton};
     color: ${props.theme.colorWhite}
-  ` : `
+  ` : css`
     background-color: ${props.theme.colorGray};
     color: ${props.theme.colorBlackForText};
     cursor: pointer;
@@ -69,20 +69,22 @@ export const RadioLabelForTime = styled.span`
 
 export const RadioLabelForType = styled.span`
   position: relative;
+  display: flex;
+  min-width: 420px;
+  height: 100%;
+  margin-left: -20px;
+  padding-left: 46px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   align-items: center;
-  padding-left: 26px;
   box-sizing: border-box;
-  height: 18px;
   cursor: pointer;
-  padding-top: 5px;
-  padding-bottom: 5px;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
-    top: 5px;
-    left: 0;
+    left: 20px;
     height: 17px;
     width: 17px;
     border: 1px solid ${(props) => props.theme.colorForButton};
@@ -94,17 +96,13 @@ export const RadioLabelForType = styled.span`
       content: "";
       display: block;
       position: absolute;
-      top: 8px;
-      left: 3px;
+      left: 23px;
       height: 13px;
       width: 13px;
       background-color: ${props.theme.colorForButton};
       border-radius: 50%;
     }
   `}
-`;
-
-export const DurationWrapper = styled(Ul)`
 `;
 
 export const AccordionText = styled.div`
