@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MainPage from '../pages/main-page/main-page';
-import starList from '../../mocks/starList';
-import gallery from '../../mocks/gallery';
-import buyOptions from '../../mocks/buyOptions';
-import BuyPage from '../pages/buy-page/buy-page';
-import { AppRoute } from '../../const';
-import ScrollTop from '../ui/scroll-top/scroll-top';
-import PageWrapper from '../layout/page-wrapper/page-wrapper';
+import MainPage from 'src/components/pages/main-page/main-page';
+import starList from 'src/mocks/starList';
+import gallery from 'src/mocks/gallery';
+import buyOptions from 'src/mocks/buyOptions';
+import BuyPage from 'src/components/pages/buy-page/buy-page';
+import { AppRoute } from 'src/const';
+import ScrollTop from 'src/components/ui/scroll-top/scroll-top';
+import PageWrapper from 'src/components/layout/page-wrapper/page-wrapper';
 import { GlobalStyle } from './styles';
 
 
