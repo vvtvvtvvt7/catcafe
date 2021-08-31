@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
-import 'swiper/swiper.scss';
 import { SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation,Thumbs } from 'swiper/core';
 import LeftArrow from 'src/assets/images/left-arrow.cmp.svg';
+import 'swiper/css';
 
 import {
   RightArrow,
