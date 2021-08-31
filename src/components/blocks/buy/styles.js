@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Section, Ul } from 'src/components/styled';
+import { Section } from 'src/components/styled';
 import buyBackground from 'src/assets/images/buy-background.svg';
 import buyBackgroundRight from 'src/assets/images/buy-right-background.svg';
 import buyBackgroundRightTop from 'src/assets/images/buy-right-background-top.svg';
