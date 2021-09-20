@@ -10,7 +10,7 @@
     "swiper": "7.0.1"
   },
   "scripts": {
-    "build": "webpack -p --mode production",
+    "build": "webpack --mode production",
     "start": "webpack server --mode development",
     "eslint": "eslint --ext .jsx --ext .js ./src/",
     "svgr": "svgr --ext=jsx -d ../catcafe2/catcafe/src/components/icons/ src/assets/icons/svg/",
